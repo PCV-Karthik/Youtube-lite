@@ -79,7 +79,7 @@ const Comments = ({videoId}) => {
           currentUser? <Avatar src={currentUser.img} /> : 
           <Avatar src="frontend/src/img/unknownProfilePic.jpeg" />
         }
-        <Input placeholder={currentUser? 'Add a comment...' : 'Sign In to add a comment' } onChange={(e) => setAddComment(e.target.value)} disabled = {currentUser? "Disable" : "Enabled"}/>
+        <Input placeholder={currentUser? 'Add a comment...' : 'Sign In to add a comment' } onChange={(e) => setAddComment(e.target.value)} disabled = {currentUser? false : true}/>
         {currentUser && <Button onClick={handelComment}>Comment</Button>}
       </NewComment>
       {comments.map(comment=>(
