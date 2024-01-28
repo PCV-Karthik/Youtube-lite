@@ -126,6 +126,8 @@ const VideoFrame = styled.video`
 const Video = ({ hide, setDarkMode, darkMode }) => {
   const { currentUser } = useSelector((state) => state.user);
   const { currentVideo } = useSelector((state) => state.video);
+  console.log(currentUser);
+  console.log(currentVideo);
 
   const dispatch = useDispatch();
 
