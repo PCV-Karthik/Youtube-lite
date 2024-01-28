@@ -138,8 +138,9 @@ const Video = ({ hide, setDarkMode, darkMode }) => {
 
   useEffect(() => {
     const fetchData = async () => {
+      console.log("one");
       try {
-        console.log("Inside");
+        console.log("two");
         const videoRes = await axios.get(`/videos/find/${path}`);
         const channelRes = await axios.get(
           `/users/find/${videoRes.data.userId}`
@@ -150,7 +151,9 @@ const Video = ({ hide, setDarkMode, darkMode }) => {
         console.log(err);
       }
     };
+    console.log("3");
     fetchData();
+    console.log("4");
   }, [path, dispatch]);
 
   const [triggered, setTriggered] = useState(false);
