@@ -138,6 +138,7 @@ const Video = ({ hide, setDarkMode, darkMode }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        console.log("Inside");
         const videoRes = await axios.get(`/videos/find/${path}`);
         const channelRes = await axios.get(
           `/users/find/${videoRes.data.userId}`
@@ -188,8 +189,6 @@ const Video = ({ hide, setDarkMode, darkMode }) => {
       dispatch(subscription(channel._id));
     }
   };
-
-  //TODO: DELETE VIDEO FUNCTIONALITY
 
   return (
     <Container>
