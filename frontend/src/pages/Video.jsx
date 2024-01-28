@@ -135,9 +135,8 @@ const Video = ({ hide, setDarkMode, darkMode }) => {
   console.log(path);
 
   const [channel, setChannel] = useState({});
-
-  useEffect(() => {
-    const fetchData = async () => {
+  
+  const fetchData = async () => {
       console.log("one");
       try {
         console.log("two");
@@ -151,10 +150,15 @@ const Video = ({ hide, setDarkMode, darkMode }) => {
         console.log(err);
       }
     };
+
+  useEffect(() => {
+    
     console.log("3");
     fetchData();
     console.log("4");
   }, [path, dispatch]);
+
+  fetchData();
 
   const [triggered, setTriggered] = useState(false);
   const [popTitle, setPopTitle] = useState("");
