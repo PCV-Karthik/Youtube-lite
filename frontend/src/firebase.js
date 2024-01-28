@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD3gxVIAMIf0ubKgMI9cdkjuHJ8B3ZJQCc",
+  apiKey: process.env.REACT_APP_FIREBASE_API,
   authDomain: "lite-e572a.firebaseapp.com",
   projectId: "lite-e572a",
   storageBucket: "lite-e572a.appspot.com",
